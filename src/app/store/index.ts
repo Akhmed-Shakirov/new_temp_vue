@@ -1,2 +1,1 @@
-export { storeToRefs } from 'pinia'
-export { useCount } from './count.ts'
+export { useUser } from './user.ts'

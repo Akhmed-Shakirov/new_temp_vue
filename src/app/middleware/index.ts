@@ -1,7 +1,5 @@
-import checkLogin from './checkLogin.ts'
+import { checkLogin } from './checkLogin.ts'
 
-const middleware = [
+export const middleware = [
     checkLogin
 ]
-
-export default middleware

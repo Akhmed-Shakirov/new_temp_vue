@@ -1,22 +1,30 @@
 <template>
-    <div class="validator" ref="validator">
+    <form @submit.prevent="submit" class="validator" ref="validator">
         <slot />
-    </div>
+    </form>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-    name?: string
+    // name?: string
 }>()
+props
 
 const emit = defineEmits(['submit', 'error'])
 
 const validator = ref<any>()
 
-const toggle = () => {
-    let valid = true
+const submit = async () => {
+    const inputs = validator.value.querySelectorAll('input')
 
-    if (props.name) console.log(props.name)
+    await inputs.forEach((input: any) => {
+        const inputEvent = new Event('input', {
+            bubbles: true,
+            cancelable: true
+        })
+
+        input.dispatchEvent(inputEvent)
+    })
 
     if (!validator.value.querySelectorAll('.invalid-field')?.length) {
         emit('submit')
@@ -24,10 +32,6 @@ const toggle = () => {
         emit('error')
     }
 }
-
-defineExpose({
-    toggle
-})
 </script>
 
 <style scoped lang="scss">

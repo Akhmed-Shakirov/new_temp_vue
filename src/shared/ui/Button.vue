@@ -1,5 +1,8 @@
 <template>
-    <button class="button">
+    <button
+        class="button"
+        :type="isSubmit ? 'submit' : 'button'"
+    >
         {{ $t(value ?? '') }}
     </button>
 </template>
@@ -7,7 +10,9 @@
 <script setup lang="ts">
 const props = defineProps<{
     value: string
+    isSubmit?: boolean
 }>()
+props
 </script>
 
 <style scoped lang="scss">

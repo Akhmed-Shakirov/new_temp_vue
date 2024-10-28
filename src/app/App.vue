@@ -6,6 +6,6 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const layout = computed(() => route?.meta?.layout)
+const layout = computed(() => route?.meta?.layout || 'default')
 onMounted(() => useStartApp())
 </script>

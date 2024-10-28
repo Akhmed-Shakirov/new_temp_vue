@@ -1,6 +1,6 @@
-// import { useToken, storeToRefs } from '@/shared/store/index'
+// import { useToken, storeToRefs } from '@store/index'
 
-const checkLogin = (to: any) => {
+export const checkLogin = (to: any) => {
     // const router = useRouter()
     // const { is_auth } = storeToRefs(useToken())
 
@@ -8,5 +8,3 @@ const checkLogin = (to: any) => {
     //     router.push('/login')
     // }
 }
-
-export default checkLogin

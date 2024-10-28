@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import middleware from '@/app/middleware/index'
+import { middleware } from '@/app/middleware/index'
+import { TSRoute } from '@type/TSRoute'
 
-const routes = [
+const routes: TSRoute[] = [
     {
         path: '/',
-        component: () => import('@/pages/home/index.vue'),
-        meta: {
-            layout: 'default'
-        }
+        component: () => import('@/pages/home/index.vue')
+    },
+    {
+        path: '/about',
+        component: () => import('@/pages/about/index.vue')
     }
 ]
 

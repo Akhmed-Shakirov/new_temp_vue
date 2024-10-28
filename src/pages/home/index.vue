@@ -2,11 +2,7 @@
     <section class="pages">
         <h1>Validator</h1>
 
-        <Validator
-            name="Forma1"
-            @submit="submit('Forma1 submit')"
-            ref="validator1"
-        >
+        <Validator @submit="submit">
             <Input
                 label="email"
                 v-model="item.email"
@@ -25,69 +21,22 @@
             <Input
                 label="password"
                 v-model="item.password"
+                type="number"
                 isRequired
                 minlength="6"
             />
 
-            <Button
-                value="Save"
-                @click="validator1.toggle()"
-            />
-        </Validator>
-
-        <br><br>
-
-        <Validator
-            name="Forma2"
-            @submit="submit('Forma2 submit')"
-            ref="validator2"
-        >
-            <Input
-                label="email"
-                v-model="item2.email"
-                isRequired
-                isEmail
-                minlength="6"
-            />
-
-            <Input
-                label="login"
-                v-model="item2.login"
-                isRequired
-                minlength="6"
-            />
-
-            <Input
-                label="password"
-                v-model="item2.password"
-                isRequired
-                minlength="6"
-            />
-
-            <Button
-                value="Save"
-                @click="validator2.toggle()"
-            />
+            <Button value="Save" isSubmit />
         </Validator>
     </section>
 </template>
 
 <script setup lang="ts">
-
-const validator1 = ref<any>()
-const validator2 = ref<any>()
-
 const submit = (event: any) => {
-    console.log(event)
+
 }
 
 const item = ref({
-    email: '',
-    login: '',
-    password: ''
-})
-
-const item2 = ref({
     email: '',
     login: '',
     password: ''

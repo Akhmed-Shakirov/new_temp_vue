@@ -10,12 +10,12 @@ export default defineConfig({
         AutoImport({
             imports: [
                 'vue',
-                'vue-router'
+                'vue-router',
+                'pinia'
             ],
             dts: 'src/auto-imports.d.ts',
             dirs: [
-                './src/shared/hook',
-                './src/shared/type'
+                './src/shared/hook'
             ],
             eslintrc: {
                 enabled: true,
@@ -44,6 +44,7 @@ export default defineConfig({
             '@ui': path.resolve(__dirname, './src/shared/ui'),
             '@store': path.resolve(__dirname, './src/app/store'),
             '@widgets': path.resolve(__dirname, './src/widgets'),
+            '@type': path.resolve(__dirname, './src/shared/type'),
             '@entities': path.resolve(__dirname, './src/entities'),
         }
     },

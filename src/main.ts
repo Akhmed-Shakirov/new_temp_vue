@@ -6,7 +6,6 @@ import router from '@/app/router'
 import i18n from '@/app/plugins/i18n'
 import App from '@/app/App.vue'
 import '@/app/assets/scss/main.scss'
-import 'custom-vue-scrollbar/dist/style.css'
 
 import { Default, Empty } from '@/app/layouts'
 

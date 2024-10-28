@@ -6,6 +6,7 @@
             "@ui/*": ["src/shared/ui/*"],
             "@store/*": ["src/app/store/*"],
             "@widgets/*": ["src/widgets/*"],
+            "@type/*": ["src/shared/type/*"],
             "@entities/*": ["src/entities/*"],
         },
         "target": "ES2020",
