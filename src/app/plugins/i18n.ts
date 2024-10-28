@@ -29,6 +29,8 @@ const i18n = createI18n({
             }
         }
     }
+    // "days": "0 дней | {n} день | {n} дня | {n} дней"
+    // $t('days', 3)
 })
 
 export default i18n
